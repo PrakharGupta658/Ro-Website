@@ -8,7 +8,8 @@ const Home = () => {
       <Comman
         greating="Welcome To"
         name="Shree Banke Viharee Jee Enterprises"
-        content="Your trusted source for high-quality water purification systems. We are dedicated to providing clean and safe drinking water for households and businesses across Farrukhabad."
+        name1= "Your trusted source for high-quality water purification systems."
+        content="Trusted source for high-quality water purification systems. We are dedicated to providing clean and safe drinking water for households and businesses across Farrukhabad."
         btn="Check Products"
         img={Homeimg}
         src="/products"
