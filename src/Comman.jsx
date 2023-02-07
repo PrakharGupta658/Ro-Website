@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import Typewriter from "typewriter-effect";
 
 const Comman = (props) => {
   return (
@@ -14,7 +14,17 @@ const Comman = (props) => {
                 <div className="col-md-6 pt-5 pt-lg-0  order-1 order-lg-1 d-flex  justify-content-center flex-column">
                   <h1>
                     {props.greating} <br />{" "}
-                    <strong className="brand-name">{props.name}</strong>
+                    <strong className="brand-name"> <Typewriter
+                     options={{
+                      autoStart: true,
+                      loop: true,
+                      delay:40,
+                      deleteSpeed:20,
+                      strings:[
+                        props.name,
+                       props.name1
+                      ],
+                     }}/></strong>
                   </h1>
                   <h2 className="my-3 txt">{props.content}</h2>
                   <h1>
