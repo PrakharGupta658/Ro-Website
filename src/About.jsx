@@ -13,8 +13,10 @@ const About = () => {
         name2="Our Mission"
         content2=" Our mission is to provide the highest standard of customer service, while offering products that are effective, affordable and environmentally friendly. We believe in using cutting-edge technology to purify water and ensure that our customers have access to the cleanest and healthiest water possible."
         btn="Contact Us"
+        btn2="Login"
         img={Aboutimg}
         src="/contact"
+        src2="/loginpage"
       />
     </>
   );
