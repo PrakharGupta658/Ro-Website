@@ -81,6 +81,7 @@ font-family: 'Dosis', sans-serif;
 }
 #header .brand-name{
     color: #3498db;
+    
 }
 #header{
     color: #484848;
@@ -144,4 +145,15 @@ h2{
 .card:hover{
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.wlcmText{
+    color: black;
+    text-shadow: 1px 1px 2px wheat, 0 0 25px wheat, 0 0 5px wheat;
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Dosis', sans-serif;
+
 }
