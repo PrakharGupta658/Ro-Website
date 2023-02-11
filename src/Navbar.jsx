@@ -7,7 +7,7 @@ import "./index.css";
 import { NavLink } from "react-router-dom";
 import brandLogo from "./image/brandlogo1.png";
 
-const Navbar = () => {
+const Navbar = (props) => {
   // const {
   //   isEmpty,
   //   totalUniqueItems,
@@ -43,6 +43,10 @@ const Navbar = () => {
                   className="collapse navbar-collapse"
                   id="navbarSupportedContent"
                 >
+
+                  <h2 className="navbar-nav ms-auto mb-2 mb-lg-0 wlcmText">{props.Wlcm}{" "}{props.Usrname}</h2>
+
+
                   <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li className="nav-item">
                       <NavLink
