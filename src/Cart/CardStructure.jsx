@@ -31,7 +31,7 @@ function CardStructure() {
                 </td>
                 <td>{item.title}</td>
                 <td>Price ₹({item.price})</td>
-                <td>Quality ({item.quantity})</td>
+                <td>Quantity ({item.quantity})</td>
                 <td>
                   <button
                     className="btn btn-warning ms-2 ml-5"
