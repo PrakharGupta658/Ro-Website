@@ -111,7 +111,7 @@ function LoginPage() {
 
                 <NavLink to="/signuppage">
                 <button type="button" className="btn btn-primary w-100 mb-4 h-" style={{backgroundColor:"#0D47A1", height:"47px"}}
-                    >Sign up</button>
+                    >Sign Up</button>
                 </NavLink>
               </MDBCol>
             </MDBRow>
