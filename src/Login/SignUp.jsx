@@ -171,7 +171,7 @@ function SignUpPage() {
                         sign up
                       </MDBBtn> */}
                       <button type="button" className="btn btn-primary w-100 mb-4" onClick={handelCreateAccount}
-                        disabled={BtnDisable}>Sign up</button>
+                        disabled={BtnDisable}>Sign Up</button>
 
                       {/* <div className="text-center">
                       <p>or sign up with:</p>
