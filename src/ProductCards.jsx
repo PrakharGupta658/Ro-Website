@@ -1,9 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect , useState} from "react";
 import { useCart } from "react-use-cart";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { auth } from "./Firebase/Firebase";
 
 function ProductCards(props) {
+  const [addToCart , setAddToCart] = useState(false);
+  const [addToCart1 , setAddToCart1] = useState("ADD TO CART");
+
+  useEffect(() => {
+    auth.onAuthStateChanged((usrName) => {
+      if(usrName) {
+         setAddToCart(false)
+      } else {
+        setAddToCart(true)
+        setAddToCart1("LogIn For Buy")
+      }
+    
+    });
+  }, []);
+
   const { addItem } = useCart();
 
   console.log("additem is==", addItem);
@@ -38,8 +54,9 @@ function ProductCards(props) {
                   theme: "colored",
                 });
               }}
+              disabled={addToCart}
             >
-              ADD TO CART
+             {addToCart1}
             </button>
           </div>
         </div>
