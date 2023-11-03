@@ -12,7 +12,8 @@ const Comman = (props) => {
             {/* we use only 10 colum out of 12 and show in center */}
             <div className="col-10 mx-auto">
               <div className="row">
-                <div className="col-md-6 pt-5 pt-lg-0  order-1 order-lg-1 d-flex  justify-content-center flex-column">
+                {/* <div className="col-md-6 pt-5 pt-lg-0  order-1 order-lg-1 d-flex  justify-content-center flex-column"> */}
+                <div className="col-md-6 pt-5 pt-lg-0 order-1 order-lg-1 d-flex justify-content-center flex-column">
                   <h1>
                     {props.greating} <br />{" "}
                     <strong className="brand-name">
@@ -28,7 +29,7 @@ const Comman = (props) => {
                       />
                     </strong>
                   </h1>
-                  <h2 className="my-3 txt">{props.content}</h2>
+                  <h2 className="my-3 txt d-none d-lg-block ">{props.content}</h2>
                   <h1>
                     <strong className="brand-name">{props.name2}</strong>
                   </h1>
@@ -44,7 +45,8 @@ const Comman = (props) => {
                   </div>
                 </div>
 
-                <div className="col-lg-6  order-1 order-lg-2 header-img">
+                {/* <div className="col-lg-6  order-1 order-lg-2 header-img"> */}
+                <div className="col-lg-6 order-1 order-lg-2 header-img d-none d-md-block">
                   <img
                     src={props.img}
                     className="img-fluid animated"

@@ -15,6 +15,10 @@ function CardStructure() {
   } = useCart();
 
   if (isEmpty) return <h2 className="text-center mt-5">Your Cart is Empty</h2>;
+
+  function handleTotalItem() {
+    window.location.reload();
+  }
   return (
     <>
       <h5 className="text-center m-5">
@@ -31,7 +35,7 @@ function CardStructure() {
                 </td>
                 <td>{item.title}</td>
                 <td>Price ₹({item.price})</td>
-                <td>Quantity ({item.quantity})</td>
+                <td>Quality ({item.quantity})</td>
                 <td>
                   <button
                     className="btn btn-warning ms-2 ml-5"
@@ -51,7 +55,9 @@ function CardStructure() {
                   </button>
                   <button
                     className="btn btn-danger ms-2 mt-4"
-                    onClick={() => removeItem(item.id)}
+                    onClick={() => {
+                      handleTotalItem();
+                      removeItem(item.id)}}
                   >
                     Remove Item
                   </button>
@@ -78,4 +84,4 @@ function CardStructure() {
 }
 
 export default CardStructure;
-export {CardStructure};
+export {};

@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
-  MDBBtn,
   MDBContainer,
   MDBRow,
   MDBCol,
   MDBCard,
   MDBCardBody,
   MDBInput,
-  MDBCheckbox,
-  MDBIcon,
 } from "mdb-react-ui-kit";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from "../Firebase/Firebase";
@@ -35,7 +32,7 @@ function SignUpPage() {
       setErrorMsg("!All fields are mandatory ");
       return;
     }
-    toast.success("Sign Up Successfully.", {
+    toast.success("SignUp Successfully.", {
       position: "top-center",
       autoClose: 5000,
       hideProgressBar: false,

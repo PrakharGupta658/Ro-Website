@@ -12,6 +12,7 @@ import SignUpPage from "./Login/SignUp";
 import LogOut from "./Login/LogOut";
 import { CartProvider } from "react-use-cart";
 import { auth } from "./Firebase/Firebase";
+import ProductDetail from "./ProductDetail";
 
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
           <Route exact path="/loginpage" element={<LoginPage />} />
           <Route exact path="/signuppage" element={<SignUpPage />} />
           <Route exact path="/logout" element={<LogOut />} />
+          <Route exact path="/productdetail/:id" element={<CartProvider><ProductDetail /></CartProvider>} />
           {/* by default home page is show */}
           <Route path="*" element={<Home />} />
         </Routes>

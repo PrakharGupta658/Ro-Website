@@ -11,6 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../Firebase/Firebase";
+import { ToastContainer, toast } from "react-toastify";
 
 function LoginPage() {
   const Navigate = useNavigate();
@@ -33,18 +34,29 @@ function LoginPage() {
     // this function return promise
     signInWithEmailAndPassword(auth, data.email, data.password)
       .then((res) => {
-        // console.log(res);
+        console.log(res);
+        toast.success("LogIn Successfully.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
         SetBtnDisable(false);
         Navigate("/");
+
       })
       .catch((err) => {
-        // console.log("error===",err)
-        SetBtnDisable(false);
-        setErrorMsg(err);
+        setErrorMsg("!Please Enter valid email & password");
+        console.log("error===",err)
+        SetBtnDisable(false);    
       });
   };
 
-  return (
+  return (<>
     <div className="container-fluid nav_bg">
       <div className="row">
         {/* we use only 10 colum out of 12 and show in center */}
@@ -119,6 +131,19 @@ function LoginPage() {
         </div>
       </div>
     </div>
+    <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
+    </>
   );
 }
 

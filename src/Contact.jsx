@@ -24,7 +24,9 @@ const Contact = () => {
     return (
       <>
         <div className="my-4 mb-auto mt-auto text-center ">
-          <h3 className="text-center">Thanks For Contacting Banke Viharee Enterprises</h3>
+          <h3 className="text-center">
+            Thanks For Contacting Banke Viharee Enterprises
+          </h3>
         </div>
       </>
     );
@@ -50,9 +52,10 @@ const Contact = () => {
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
+
       <div className="container contact_div">
         <div className="row">
-          <div className="col-md-6 col-10 mx-auto">
+          <div className="col-md-6 col-5 mx-auto">
             <form onSubmit={formSubmit}>
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
