@@ -53,7 +53,7 @@ const Contact = () => {
         ></iframe>
       </div>
 
-      <div className="container contact_div">
+      <div className="container contact_div mb-5">
         <div className="row">
           <div className="col-md-6 col-5 mx-auto">
             <form onSubmit={formSubmit}>
