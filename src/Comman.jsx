@@ -8,13 +8,13 @@ const Comman = (props) => {
     <>
       <section id="header" className="d-flex align-items-center ">
         <div className="container-fluid nav_bg">
-          <div className="row">
+          <div className="row" style={{marginBottom: props.greating == "" ? "3.4em" : ""}}>
             {/* we use only 10 colum out of 12 and show in center */}
             <div className="col-10 mx-auto">
               <div className="row">
                 {/* <div className="col-md-6 pt-5 pt-lg-0  order-1 order-lg-1 d-flex  justify-content-center flex-column"> */}
-                <div className="col-md-6 pt-5 pt-lg-0 order-1 order-lg-1 d-flex justify-content-center flex-column">
-                  <h1>
+                <div className="col-md-6 pt-lg-0 order-1 order-lg-1 d-flex justify-content-center flex-column">
+                  <h1 style={{height: props.greating == "Welcome To" ? "3.4em" : "" }}>
                     {props.greating} <br />{" "}
                     <strong className="brand-name">
                       {" "}
@@ -34,7 +34,7 @@ const Comman = (props) => {
                     <strong className="brand-name">{props.name2}</strong>
                   </h1>
                   <h2 className="my-3 txt">{props.content2}</h2>
-                  <div className="mt-3">
+                  <div className="mt-1">
                     <NavLink to={props.src2} className="btn-get-product">
                       {props.btn2}
                     </NavLink>{" "}

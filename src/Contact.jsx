@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useForm, ValidationError } from "@formspree/react";
+import { NavLink } from "react-router-dom";
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -23,10 +24,15 @@ const Contact = () => {
   if (State.succeeded) {
     return (
       <>
-        <div className="my-4 mb-auto mt-auto text-center ">
+        <div className="my-4 mb-auto mt-5 text-center ">
           <h3 className="text-center">
-            Thanks For Contacting Banke Viharee Enterprises
+            Thanks For Contacting Banke Viharee Enterprises!
           </h3>
+           <div className="mt-4">
+           <NavLink to="/products" className="btn-get-product" >
+            <button class="btn btn-outline-primary">Back to Products</button>
+          </NavLink>
+           </div>
         </div>
       </>
     );

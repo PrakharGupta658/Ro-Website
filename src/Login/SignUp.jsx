@@ -32,33 +32,35 @@ function SignUpPage() {
       setErrorMsg("!All fields are mandatory ");
       return;
     }
-    toast.success("SignUp Successfully.", {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-
+   
     SetBtnDisable(true);
     // this function return promise
     createUserWithEmailAndPassword(auth, data.email, data.password)
       .then(async(res) => {
         // console.log(res);
+        toast.success("SignUp Successfully.", {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
         SetBtnDisable(false);
         const user = res.user;
       await updateProfile(user, {
           displayName: data.Fname,
         });
-        Navigate("/");
+        setTimeout(()=>{
+          Navigate("/");
+        }, 2000)
       })
       .catch((err) => {
-        // console.log("error===",err)
+        console.log("error===",err)
         SetBtnDisable(false);
-        setErrorMsg(err);
+        setErrorMsg("Email Already Used!!");
       });
   };
 

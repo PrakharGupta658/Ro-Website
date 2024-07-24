@@ -35,9 +35,9 @@ function LoginPage() {
     signInWithEmailAndPassword(auth, data.email, data.password)
       .then((res) => {
         console.log(res);
-        toast.success("LogIn Successfully.", {
+        toast.success("LogIn Successfully!", {
           position: "top-center",
-          autoClose: 5000,
+          autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
@@ -46,8 +46,9 @@ function LoginPage() {
           theme: "colored",
         });
         SetBtnDisable(false);
-        Navigate("/");
-
+        setTimeout(()=>{
+          Navigate("/");
+        }, 2000)
       })
       .catch((err) => {
         setErrorMsg("!Please Enter valid email & password");

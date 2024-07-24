@@ -186,3 +186,8 @@ h2{
       font-weight: bold;
     }
   }
+
+
+  body::-webkit-scrollbar{
+   display: none;
+  }
